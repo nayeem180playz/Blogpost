@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h1 class="site-title">⚡ Nayeem playz</h1>
+            <div class="header-controls">
+                <button id="logoutButton" class="header-btn">Logout</button>
+                <a href="index.html" class="header-btn">Blog</a>
+                <a href="admin.html" class="header-btn">Admin</a>
+            </div>
+        </header>
+        <main>
+            <section class="admin-panel">
+                <div class="admin-section">
+                    <h3 id="postFormTitle">Add New Post</h3>
+                    <form id="postForm">
+                        <input type="hidden" id="postId">
+                        <input type="text" id="authorName" placeholder="Author Name" required>
+                        <input type="url" id="authorImage" placeholder="Author Image URL">
+                        <input type="url" id="postBanner" placeholder="Post Cover Photo URL">
+                        <input type="text" id="postTitle" placeholder="Blog Title" required>
+                        <textarea id="postSummary" placeholder="Summary (short description)" required></textarea>
+                        <textarea id="postContent" placeholder="Full Blog Content" required></textarea>
+                        <input type="text" id="postTags" placeholder="Tags (comma-separated)">
+                        <select id="postCategory" required></select>
+                        <button type="submit" class="btn-save">Save Post</button>
+                    </form>
+                    <h3>Existing Posts</h3>
+                    <div id="postsList"></div>
+                </div>
+                <div class="admin-section">
+                    <h3>Manage Categories</h3>
+                    <form id="categoryForm">
+                        <input type="text" id="categoryName" placeholder="New Category Name" required>
+                        <button type="submit" class="btn-add">Add Category</button>
+                    </form>
+                    <h3>Existing Categories</h3>
+                    <div id="categoriesList"></div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script type="module" src="admin.js"></script>
+</body>
+</html>
